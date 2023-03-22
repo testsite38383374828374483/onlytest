@@ -43,14 +43,14 @@
         <section class="form-payment-section">
             <container class="section-inner margin-top-bottom">
                 <h2 class="section-inner-h2">Ты можешь выиграть:</h2>
-                <ul class="section-inner-list">
-                    <ol>Комплект DJ-оборудования Pioneer CDJ2000-DJM900NX</ol>
-                    <ol>Наушники Sennheiser HD-25</ol>
-                    <ol>Виниловую пластинку от @farid_odilbekov</ol>
-                    <ol>5000т.р.</ol>
-                    <ol>3000т.р.</ol>
-                    <ol>1000т.р.</ol>
-                </ul>
+                <ol class="section-inner-list">
+                    <li>Комплект DJ-оборудования Pioneer CDJ2000-DJM900NX</ol>
+                    <li>Наушники Sennheiser HD-25</li>
+                    <li>Виниловую пластинку от @farid_odilbekov</li>
+                    <li>5000т.р.</li>
+                    <li>3000т.р.</li>
+                    <li>1000т.р.</li>
+                </ol>
                 <form action="section-inner-payment">
                     <input type="text" name="name" placeholder="Имя"/>
                     <input type="text" name="surname" placeholder="Фамилия"/>
@@ -108,9 +108,9 @@
             var me=this;
 
             if( ( this.tl - today ) > 0 ){
-            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">DAYS</div><span class="number day">'+day+'</span></span>';
-            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">HOURS</div><span class="number hour">'+hour+'</span></span>';
-            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">MINS</div><span class="number min">'+this.addZero(min)+'</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">SECS</div><span class="number sec">'+this.addZero(sec)+'</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><span class="number day">'+day+'</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><span class="number hour">'+hour+'</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><span class="number min">'+this.addZero(min)+'</span></span><span class="number-wrapper"><div class="line"></div><span class="number sec">'+this.addZero(sec)+'</span></span>';
             this.elem.innerHTML = timer;
             tid = setTimeout( function(){me.countDown();},10 );
             }else{
@@ -121,7 +121,7 @@
             }
             function CDT(){
 
-            var tl = new Date('2024/01/01 00:00:00');
+            var tl = new Date('2023/04/22 00:00:00');
 
             var timer = new CountdownTimer('CDT',tl,'<span class="number-wrapper"><div class="line"></div><span class="number end">Трансляция начинается</span></span>');
             timer.countDown();
