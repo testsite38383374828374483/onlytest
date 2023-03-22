@@ -1,0 +1,19 @@
+@media screen and (max-width: 1000px) and (min-width: 601px){
+    .instagram-post > img {
+        width: calc(100% - 60px);
+        height: auto;
+        margin: 0px 20px;
+    }
+
+    .instagram-post {
+        width: calc(100% / 2 - 40px);
+        height: 100%;
+        margin: 20px 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instagram-posts {
+        flex-wrap: wrap;
+    }
+}

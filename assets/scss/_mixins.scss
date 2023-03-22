@@ -1,0 +1,17 @@
+@mixin all-headings {
+    @for $index from 1 through 6 {
+        h#{$index} {
+            font-size: $index*0.95rem;
+            @content;
+        }
+    }
+}
+
+@mixin headings($base) {
+  @for $i from 1 through 6 {
+    h#{(6 + 1) - $i},
+    .h#{(6 + 1) - $i} {
+      font-size: #{$base + (($base / 2) * $i)};
+    }
+  }
+}

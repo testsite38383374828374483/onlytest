@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Розыгрыш призов от Антона Гранцева</title>
+        <link rel="stylesheet" href="assets/scss/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-inner-top">
+                    <div class="header-inner-image">
+                        <img src="assets/images/sennheiser-hd-25.png" alt="Sennheiser HD 25"/>
+                    </div>
+                    <div class="spacing"></div>
+                    <div class="header-inner-image">
+                        <img src="assets/images/vinyl-sf.png" alt="Vinyl sf"/>
+                    </div>
+                </div>
+                <div class="header-inner-bottom">
+                    <div class="header-inner-image">
+                        <img src="assets/images/cdj-2000-1.png" alt="Cdj 2000 1"/>
+                    </div>
+                    <div class="header-inner-image">
+                        <img src="assets/images/djm-900-nexus.png" alt="Djm 900 Nexus"/>
+                    </div>
+                    <div class="header-inner-image">
+                        <img src="assets/images/cdj-2000-2.png" alt="Cdj 2000 2"/>
+                    </div>
+                </div>
+                <div class="header-inner-text">
+                    <img src="assets/images/text.svg" alt="Header text"/>
+                </div>
+            </div>
+        </header>
+        <section class="timer">
+            <container class="section-inner">
+                <h2 class="section-inner-h2">Прямой эфир розыгрыша через:</h2>
+                <div id="CDT"></div>
+            </container>
+        </section> 
+        <section class="form-payment-section">
+            <container class="section-inner margin-top-bottom">
+                <h2 class="section-inner-h2">Ты можешь выиграть:</h2>
+                <ul class="section-inner-list">
+                    <ol>Комплект DJ-оборудования Pioneer CDJ2000-DJM900NX</ol>
+                    <ol>Наушники Sennheiser HD-25</ol>
+                    <ol>Виниловую пластинку от @farid_odilbekov</ol>
+                    <ol>5000т.р.</ol>
+                    <ol>3000т.р.</ol>
+                    <ol>1000т.р.</ol>
+                </ul>
+                <form action="section-inner-payment">
+                    <input type="text" name="name" placeholder="Имя"/>
+                    <input type="text" name="surname" placeholder="Фамилия"/>
+                    <input type="number" name="phone" placeholder="Телефон"/>
+                    <input type="text" name="city" placeholder="Город"/>
+                    <button type="submit" name="usetype">Участвовать бесплатно</button>
+                    <button type="submit" name="usetype">Участвовать за главный приз</button>
+                </form>
+                <div class="flex-container rules binding-to-section-inner-payment">
+                    <a class="rule-section">Правила бесплатного конкурса</a>
+                    <a class="rule-section">Правила участия в конкурсе за главный приз</a>
+                </div>
+            </container>
+        </section>
+        <section class="blogger-info">
+                <container class="blogger-info-inner-image">
+                    <img src="assets/images/blogger.png" alt="Blogger"/>
+                </container>
+                <container class="blogger-info-inner-about">
+                    <h2 class="section-title">Антон Грачев</h2>
+                    <h4 class="section-description nobold">Музыкант, блогер, предприниматель</h4>
+                </container>
+        </section>
+        <section class="instagram-posts">
+            <container class="instagram-post">
+                <img src="assets/images/post-1.png" alt="Post 1"/>
+            </container>
+            <container class="instagram-post">
+                <img src="assets/images/post-2.png" alt="Post 2"/>
+            </container>
+            <container class="instagram-post">
+                <img src="assets/images/post-3.png" alt="Post 3"/>
+            </container>
+        </section>
+        <section class="social-links section">
+            <a class="social-link" href="https://instagram.com/@anthony_grantsev">@anthony_grantsev</a>
+        </section>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/jаvascript"></script>
+        <script>
+            function CountdownTimer(elm,tl,mes){
+            this.initialize.apply(this,arguments);
+            }
+            CountdownTimer.prototype={
+            initialize:function(elm,tl,mes) {
+            this.elem = document.getElementById(elm);
+            this.tl = tl;
+            this.mes = mes;
+            },countDown:function(){
+            var timer='';
+            var today=new Date();
+            var day=Math.floor((this.tl-today)/(24*60*60*1000));
+            var hour=Math.floor(((this.tl-today)%(24*60*60*1000))/(60*60*1000));
+            var min=Math.floor(((this.tl-today)%(24*60*60*1000))/(60*1000))%60;
+            var sec=Math.floor(((this.tl-today)%(24*60*60*1000))/1000)%60%60;
+            var me=this;
+
+            if( ( this.tl - today ) > 0 ){
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">DAYS</div><span class="number day">'+day+'</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">HOURS</div><span class="number hour">'+hour+'</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">MINS</div><span class="number min">'+this.addZero(min)+'</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">SECS</div><span class="number sec">'+this.addZero(sec)+'</span></span>';
+            this.elem.innerHTML = timer;
+            tid = setTimeout( function(){me.countDown();},10 );
+            }else{
+            this.elem.innerHTML = this.mes;
+            return;
+            }
+            },addZero:function(num){ return ('0'+num).slice(-2); }
+            }
+            function CDT(){
+
+            var tl = new Date('2024/01/01 00:00:00');
+
+            var timer = new CountdownTimer('CDT',tl,'<span class="number-wrapper"><div class="line"></div><span class="number end">Трансляция начинается</span></span>');
+            timer.countDown();
+            }
+            window.onload=function(){
+            CDT();
+            }
+        </script>
+    </body>
+</html>
