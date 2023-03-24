@@ -1,4 +1,4 @@
-@import 'variables','mixins','globals', 'tablet', 'phone';
+@import 'variables','mixins','globals', 'tablet', 'phone', 'images';
 
 header.header {
     max-width: calc(80%);
@@ -10,7 +10,7 @@ header.header {
 }
 
 body {
-    background: url('../images/background-combo.png');
+    background: url($image-background);
     background-size: contain;
     margin: 0px;
 }
