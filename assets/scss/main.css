@@ -207,6 +207,9 @@ h1,
   .social-links {
     font-size: 30px !important;
   }
+  header.header {
+    min-height: 50vh !important;
+  }
 }
 
 header.header {
